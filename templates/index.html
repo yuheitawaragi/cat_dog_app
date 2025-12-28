@@ -19,8 +19,10 @@
 
     {% if pred_class %}
         <h2>予測結果：{{ pred_class }}</h2>
-        {% if description %}
-            <p>{{ description }}</p>
+    {% endif %}
+
+    {% if description %}
+        <p>{{ description }}</p>
     {% endif %}
 </body>
 </html>

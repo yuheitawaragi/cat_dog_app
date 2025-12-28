@@ -26,13 +26,12 @@ def generate_description(breed_name: str) -> str:
 
     try:
         result = subprocess.run(
-            ["ollama", "run", "qwen2.5:7b", "--json", "--prompt", prompt],
+            ["ollama", "run", "qwen2.5:7b", prompt],
             capture_output=True,
             text=True,
             check=True
         )
-        output = json.loads(result.stdout)
-        return output.get("completion", "").strip()
+        return result.stdout.strip()
     except Exception as e:
         print("LLM生成エラー:", e)
         return "(説明文生成は現在利用できません)"

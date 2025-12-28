@@ -14,6 +14,29 @@ from torchvision import models, transforms
 from PIL import Image
 from flask import Flask, render_template, request
 
+import subprocess
+import json
+
+def generate_description(breed_name: str) -> str:
+    """
+    breed_name（犬・猫の種類）を渡すと
+    LLMが日本語で特徴を返す
+    """
+    prompt = f"日本語で、{breed_name}について初心者向けに100文字以内で説明してください。"
+
+    try:
+        result = subprocess.run(
+            ["ollama", "run", "qwen2.5:7b", "--json", "--prompt", prompt],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        output = json.loads(result.stdout)
+        return output.get("completion", "").strip()
+    except Exception as e:
+        print("LLM生成エラー:", e)
+        return "(説明文生成は現在利用できません)"
+
 # =========================
 # Flask設定
 # =========================
@@ -70,12 +93,15 @@ def index():
                 outputs = model(img)
                 pred_idx = outputs.argmax(dim=1).item()
                 pred_class = class_names[pred_idx]
+                description = generate_description(pred_class)
 
     return render_template(
         "index.html",
         pred_class=pred_class,
-        image_path=image_path
+        image_path=image_path,
+        description=description
     )
+
 
 if __name__ == "__main__":
     app.run(debug=True)

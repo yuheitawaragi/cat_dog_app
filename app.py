@@ -79,6 +79,7 @@ transform = transforms.Compose([
 def index():
     pred_class = None
     image_path = None
+    description = None
 
     if request.method == "POST":
         file = request.files["image"]

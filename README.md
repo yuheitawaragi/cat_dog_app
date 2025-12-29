@@ -40,4 +40,12 @@ bash
 ollama pull qwen2.5:7b
 ```
 
-## How to Run
+## Future Work
+### UI/UX Improvements
+- More user-friendly and visually appealing interface
+- Better image preview and prediction display
+- Responsive design for mobile devices
+### LLM Fine-Tuning
+- Fine-tune the LLM on dog and cat–specific datasets
+- Improve accuracy and consistency of breed descriptions
+- Potential multilingual support

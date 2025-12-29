@@ -4,3 +4,10 @@ The application is built with Flask, PyTorch, and EfficientNet, and integrates a
 
 ## Features
 - Upload an image of a dog or cat
+- Predict the breed using a trained EfficientNet-B0 model
+- Generate a beginner-friendly Japanese description (≤100 characters) using an LLM
+- Simple and lightweight Flask-based web interface
+
+## Model Overview
+### Image Classification
+

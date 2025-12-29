@@ -39,3 +39,5 @@ bash
 
 ollama pull qwen2.5:7b
 ```
+
+## How to Run

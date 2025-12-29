@@ -29,5 +29,12 @@ The application is built with Flask, PyTorch, and EfficientNet, and integrates a
 Example installation:
 ```
 bash
+
 pip install torch torchvision flask pillow
+```
+Install Ollama and pull the model:
+```
+bash
+
+ollama pull qwen2.5:7b
 ```

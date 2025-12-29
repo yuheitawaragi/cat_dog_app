@@ -3,3 +3,4 @@ This repository contains a web application that classifies dog and cat breeds fr
 The application is built with Flask, PyTorch, and EfficientNet, and integrates an LLM via Ollama (Qwen2.5) for natural language generation.
 
 ## Features
+- Upload an image of a dog or cat

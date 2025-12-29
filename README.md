@@ -26,6 +26,7 @@ The application is built with Flask, PyTorch, and EfficientNet, and integrates a
 - Flask
 - Pillow
 - Ollama (installed and running locally)
+
 Example installation:
 ```
 bash

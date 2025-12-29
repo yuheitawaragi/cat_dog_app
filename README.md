@@ -18,3 +18,16 @@ The application is built with Flask, PyTorch, and EfficientNet, and integrates a
 - LLM: Qwen2.5:7B
 - Inference via ollama run
 - Prompt-based generation (Japanese)
+
+## Requirements
+- Python 3.9+
+- PyTorch
+- torchvision
+- Flask
+- Pillow
+- Ollama (installed and running locally)
+Example installation:
+---
+bash
+pip install torch torchvision flask pillow
+---

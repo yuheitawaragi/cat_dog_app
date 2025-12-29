@@ -49,3 +49,8 @@ ollama pull qwen2.5:7b
 - Fine-tune the LLM on dog and cat–specific datasets
 - Improve accuracy and consistency of breed descriptions
 - Potential multilingual support
+
+## Notes
+- This application assumes local execution of Ollama.
+- Image filenames are saved as-is; filename sanitization is recommended for production use.
+

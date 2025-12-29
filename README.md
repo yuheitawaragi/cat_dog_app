@@ -10,4 +10,11 @@ The application is built with Flask, PyTorch, and EfficientNet, and integrates a
 
 ## Model Overview
 ### Image Classification
-
+- Architecture: EfficientNet-B0
+- Framework: PyTorch
+- Input size: 224 × 224 RGB images
+- Normalization follows ImageNet standards
+## Text Generation
+- LLM: Qwen2.5:7B
+- Inference via ollama run
+- Prompt-based generation (Japanese)
